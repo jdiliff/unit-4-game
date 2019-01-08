@@ -1,0 +1,153 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Collector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="assets/javascript/main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Acme|Philosopher|Poiret+One|Tenor+Sans" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<script>
+
+
+
+
+    $(document).ready(function () {
+        //define all our variables 
+        var one = 1;
+        var two = 2;
+        var three = 3;
+        var four = 4;
+        var score = 0;
+
+      
+
+        //figure out how to make random number and your score appear on the screen when it's loaded and then add the variables to them. 
+
+
+        //begin the game when the start button is pressed
+        $("#start").on('click', function () {
+        resetScore();
+        })
+
+
+    
+        //I know I did this the hard way but it was the only way that made sense to me
+        //when each crystal is clicked on this adds the value of that crystal to the User's score.
+        $("#crysOne").on('click', function () {
+            score += 3;
+            $('#userScore').text('Your Score:  ' + score);
+        })
+
+        $("#crysTwo").on('click', function () {
+            score += 5;
+            $('#userScore').text('Your Score:  ' + score);
+        })
+
+        $("#crysThree").on('click', function () {
+            score += 2;
+            $('#userScore').text('Your Score:  ' + score);
+        })
+
+        $("#crysFour").on('click', function () {
+            score += 6;
+            $('#userScore').text('Your Score:  ' + score);
+        })
+        //end 
+
+
+        //if the user matches the numbers 
+        if (score>=random) {
+            userWins(); 
+        }
+
+        //function to reset the score and repopulate a random number. Will use when reset button is pressed, when user score is >= the random number
+        function resetScore() {
+            score = 0; 
+            $('#userScore').text("Your Score:  " + score)
+            //populate random number
+            var random = Math.floor(Math.random() * 40) + 10;
+            //appears on the screen
+             $('#randomNumber').text('Random Number:  ' + random);
+        }
+         
+        //function to be executed when the user score is equal to the random number. 
+        function userWins() {
+            score=0
+            $('#userScore').text("Your Score:  " + score)
+            var random = Math.floor(Math.random() * 40) + 10;
+            $('#randomNumber').text('Random Number:  ' + random);
+
+        }
+
+        }
+
+    
+    )
+
+
+//add value of each to user score 
+
+//if user score > random number display message "GAME OVER" and restart function 
+
+//start the function over when the restart button is pressed 
+
+//
+
+
+//noise when crystal is clicked
+
+//noise when you win 
+
+//noise when game over 
+
+//
+
+
+//grab value of crystal user clicks
+//$(this).val()
+
+</script>
+
+<body>
+    <h1>Crystal Collector</h1>
+    <p> Click the crystals
+        to add their hidden value to your total score.
+        <br><br>
+
+        TO WIN: Match your total score to the random number.
+
+        <br>
+        GAME OVER: If your score exceeds the random number.
+
+        <br>
+        <br>
+        Press start to begin.
+    </p>
+
+
+    <img id="crysOne" class="crystal" value="1" src="assets/images/gem.png" height="200px" width="200px">
+    <img id="crysTwo" class="crystal" value="2" src="assets/images/bluegem.png" height="200px" width="200px">
+    <img id="crysThree" class="crystal" value="3" src="assets/images/heartgem.png" height="200px" width="200px">
+    <img id="crysFour" class="crystal" value="4" src="assets/images/diamond.png" height="200px" width="200px">
+
+
+    <h2 id="rn"></h2>
+    <div id="randomNumber"></div>
+    <h2 id=""></h2>
+    <div id="userScore"></div>
+
+
+    <button type="button" class="button" id="start">START</button>
+
+    <button type="button" class="button" id="restart">RESTART</button>
+
+
+
+</body>
+
+</html>
