@@ -1,0 +1,54 @@
+body {
+    background: black; 
+    color: white; 
+    font-family: Tenor Sans;
+    text-align: center; 
+    border-left: 20px solid #C0C0C0;
+    border-right: 20px solid #C0C0C0; 
+}
+
+img{
+    padding: 30px;
+}
+
+p{
+    padding: 0 200px; 
+    font-size: 20px; 
+    color: #CCFFFF; 
+    
+}
+
+#rn {
+    font-family: Tenor Sans; 
+    font-size: 35px; 
+}
+
+h1 {
+    color: #FFCCCC;
+    font-size: 65px; 
+    padding-top: 25px; 
+}
+
+#rn {
+    padding-top: 25px;
+
+}
+
+.button {
+    margin: 0 20px;
+    border-radius: 5px;   
+}
+
+#start {
+    padding: 10px 15px;
+    
+}
+
+#restart {
+    padding: 10px 9px; 
+}
+
+#instructions {
+    font-size: 25px;
+
+}
